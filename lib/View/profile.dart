@@ -1,21 +1,19 @@
-import 'package:e_shopping_app/View/login.dart';
-import 'package:e_shopping_app/View/profile.dart';
 import 'package:e_shopping_app/Widgets/textfield.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-class Register extends StatelessWidget {
-  const Register({super.key});
+class ProfileSet extends StatelessWidget {
+  const ProfileSet({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+   
+return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           
-         const Text('Create Account',
+         const Text('Profile Setup',
           style: TextStyle(
             fontSize: 27,
             color: Color.fromARGB(232, 33, 149, 243),
@@ -25,7 +23,7 @@ class Register extends StatelessWidget {
           
           const SizedBox(height: 15),
 
-          const Text("Create an account so you can explore all the\nexisting jobs",
+          const Text("Please fill be below details to complete\nyour profile",
           textAlign: TextAlign.center,
            style: TextStyle(
             fontSize: 9,
@@ -36,16 +34,44 @@ class Register extends StatelessWidget {
           ),
 
           const SizedBox(height: 55),
-          const SectionName(nameit: 'Email'),
+          Stack(
+            alignment: Alignment.bottomRight,
+            children:[ 
+              
+              
+              CircleAvatar(
+              radius: 50,
+              child: IconButton(
+                onPressed:(){},
+                icon:const Icon(
+                  Icons.person,
+                  size: 60,),
+                  ),
+            ),
+
+              CircleAvatar(
+              radius: 17,
+              child: IconButton(
+                onPressed:(){},
+                icon:const Icon(
+                  Icons.camera_alt,
+                  size: 10,),
+                  ),
+            ),
+          
+          ]
+        ),
           const SizedBox(height: 25),
-          const SectionName(nameit: 'Password',forpassword: true,),
+          const SectionName(nameit: 'Full Name'),
           const SizedBox(height: 25),
-          const SectionName(nameit: 'Confirm Password',forpassword: true,),
+          const SectionName(nameit: 'Phone Number',),
+          const SizedBox(height: 25),
+          const SectionName(nameit: 'Address',),
           
           const SizedBox(height:35),
           ElevatedButton(
           onPressed: (){
-             Get.to(const ProfileSet());
+             
             }, 
              style: ButtonStyle(
              elevation:const MaterialStatePropertyAll(0),
@@ -54,25 +80,14 @@ class Register extends StatelessWidget {
               const Color.fromARGB(232, 33, 149, 243)),
            ),
           
-          child:const Text('Sing Up',
+          child:const Text('Complete Setup',
           style: TextStyle(
             fontSize: 14,
             color:Colors.white,
             fontWeight: FontWeight.w600),
            ),
           ),
-          const SizedBox(height:16),
-          TextButton(
-            onPressed:() => Get.to(const Login()),
-            child:const Text('Already have an account',
-            style: TextStyle(
-              fontSize: 9,
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.4
-            ),
-            ),
-            ),
+         
         ],
       ),
     );

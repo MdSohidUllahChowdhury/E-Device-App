@@ -1,3 +1,4 @@
+import 'package:e_shopping_app/View/profile.dart';
 import 'package:e_shopping_app/View/register.dart';
 import 'package:e_shopping_app/Widgets/textfield.dart';
 import 'package:flutter/material.dart';
@@ -24,9 +25,10 @@ class Login extends StatelessWidget {
           ),
           const SizedBox(height: 15),
 
-          const Text("Welcome back you've\n    been missed!",
+          const Text("Welcome back you've\nbeen missed!",
+          textAlign: TextAlign.center,
            style: TextStyle(
-            fontSize: 10,
+            fontSize: 9,
             color: Colors.black,
             fontWeight: FontWeight.bold,
             letterSpacing: 1.4
@@ -36,7 +38,7 @@ class Login extends StatelessWidget {
           const SizedBox(height: 55),
           const SectionName(nameit: 'Email'),
           const SizedBox(height: 25),
-          const SectionName(nameit: 'Password'),
+          const SectionName(nameit: 'Password',forpassword: true,),
           const SizedBox(height:10),
 
           const Text('Forgot your password?',
@@ -52,7 +54,7 @@ class Login extends StatelessWidget {
           
           ElevatedButton(
           onPressed: (){
-
+              Get.to(const ProfileSet());
             }, 
 
              style: ButtonStyle(

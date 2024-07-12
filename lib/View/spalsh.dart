@@ -13,12 +13,17 @@ class _SplashScreenState extends State<SplashScreen> {
 
 @override
   void initState() {
-    _splash();
+    
     super.initState();
+    splashscreen();
+
   }
-  _splash()async{
-await  Future.delayed(const Duration(seconds:5),(){});
-Get.offAll(const WelcomeScreen());
+   splashscreen() async {
+   await Future.delayed(
+   const Duration(seconds:2),
+   (){}
+   );
+   Get.offAll(const WelcomeScreen());
   }
 
   @override
