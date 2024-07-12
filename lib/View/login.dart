@@ -7,9 +7,11 @@ import 'package:get/get.dart';
 class Login extends StatelessWidget {
  
   const Login({super.key});
-
   @override
   Widget build(BuildContext context) {
+
+  final formkey = GlobalKey<FormState>();
+
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -36,12 +38,28 @@ class Login extends StatelessWidget {
           ),
 
           const SizedBox(height: 55),
-          const SectionName(nameit: 'Email'),
-          const SizedBox(height: 25),
-          const SectionName(nameit: 'Password',forpassword: true,),
-          const SizedBox(height:10),
 
-          const Text('Forgot your password?',
+          Form(
+            key: formkey,
+
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+            
+            const SectionName(
+              nameit: 'Email',
+              isRequired: true,
+              ),
+            const SizedBox(height: 25),
+            const SectionName(
+              nameit: 'Password',
+              forpassword: true,
+              isRequired: true,
+              ),
+             const SizedBox(height:10),
+
+             const Text('Forgot your password?',
           style: TextStyle(
             fontSize: 10,
             color: Color.fromARGB(232, 33, 149, 243),
@@ -50,11 +68,14 @@ class Login extends StatelessWidget {
            ),
           ),
 
-          const SizedBox(height:20),
+             const SizedBox(height:20),
           
           ElevatedButton(
           onPressed: (){
-              Get.to(const ProfileSet());
+              if (formkey.currentState!.validate())
+              {
+                Get.to(const ProfileSet());
+              }
             }, 
 
              style: ButtonStyle(
@@ -71,6 +92,12 @@ class Login extends StatelessWidget {
             fontWeight: FontWeight.w600),
           ),
           ),
+            
+              ],
+            ),
+          ),
+
+         
 
           const SizedBox(height:16),
           

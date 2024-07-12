@@ -1,5 +1,4 @@
 import 'package:e_shopping_app/View/login.dart';
-import 'package:e_shopping_app/View/profile.dart';
 import 'package:e_shopping_app/Widgets/textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,10 +8,14 @@ class Register extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final formkey = GlobalKey<FormState>();
+
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
+        
         children: [
           
          const Text('Create Account',
@@ -36,16 +39,36 @@ class Register extends StatelessWidget {
           ),
 
           const SizedBox(height: 55),
-          const SectionName(nameit: 'Email'),
-          const SizedBox(height: 25),
-          const SectionName(nameit: 'Password',forpassword: true,),
-          const SizedBox(height: 25),
-          const SectionName(nameit: 'Confirm Password',forpassword: true,),
+
+          Form(
+            key: formkey,
+            child:Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SectionName(
+                  nameit: 'Email',
+                  isRequired: true,
+                  ),
+                const SizedBox(height: 25),
+                const SectionName(
+                  nameit: 'Password',
+                  forpassword: true,
+                  isRequired: true,),
+                const SizedBox(height: 25),
+                const SectionName(
+                  nameit: 'Confirm Password',
+                  forpassword: true,
+                  isRequired: true,
+                  ),
           
           const SizedBox(height:35),
           ElevatedButton(
           onPressed: (){
-             Get.to(const ProfileSet());
+            if(formkey.currentState!.validate())
+             {
+              Get.to(const Login());
+              }
             }, 
              style: ButtonStyle(
              elevation:const MaterialStatePropertyAll(0),
@@ -61,6 +84,11 @@ class Register extends StatelessWidget {
             fontWeight: FontWeight.w600),
            ),
           ),
+              
+              ],
+            )
+          ),
+         
           const SizedBox(height:16),
           TextButton(
             onPressed:() => Get.to(const Login()),
