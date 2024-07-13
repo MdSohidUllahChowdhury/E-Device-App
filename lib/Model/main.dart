@@ -1,4 +1,4 @@
-import 'package:e_shopping_app/View/spalsh.dart';
+import 'package:e_shopping_app/View/Intro Screen/spalsh.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -12,11 +12,14 @@ class E_Shopping_App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ScreenUtilInit(
-      designSize: Size(360,720),
+    return  ScreenUtilInit(
+      designSize: const Size(360,720),
       child:  GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home:SplashScreen(),
+        home:const SplashScreen(),
+        theme:ThemeData(
+          fontFamily: 'CustomFont'
+        )
       ),
     );
   }
