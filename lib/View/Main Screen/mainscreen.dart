@@ -17,8 +17,9 @@ class MainScreen extends StatelessWidget {
     'https://ucarecdn.com/1579f3d3-4ab2-40a9-9015-679d18eeeadb/-/crop/1630x918/1,0/-/preview/-/quality/lighter/-/format/auto/-/scale_crop/1920x1080/center/',
    ];
     return Scaffold(
-      
+      backgroundColor:const Color.fromARGB(167, 243, 203, 203),
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
          onPressed: (){},
@@ -136,6 +137,7 @@ class MainScreen extends StatelessWidget {
               ),
         
             const SizedBox(height: 15),
+           
             GridView.builder(
               itemCount: 6,
               shrinkWrap: true,
@@ -147,7 +149,7 @@ class MainScreen extends StatelessWidget {
               childAspectRatio: .9
               ),
               itemBuilder:(context, index) {
-                return Productcard();
+                return const Productcard();
               }, )
             ],
           ),
