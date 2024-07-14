@@ -15,7 +15,7 @@ class WelcomeScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
          
-          Image.asset('lib/Assets/man.png',
+          Image.asset('lib/Assets/Images/man.png',
           height: 250,
           width: double.infinity,
           ),

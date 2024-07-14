@@ -1,5 +1,7 @@
+import 'package:e_shopping_app/View/Main%20Screen/mainscreen.dart';
 import 'package:e_shopping_app/Widgets/textfield.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProfileSet extends StatelessWidget {
   const ProfileSet({super.key});
@@ -70,9 +72,7 @@ return Scaffold(
           
           const SizedBox(height:35),
           ElevatedButton(
-          onPressed: (){
-             
-            }, 
+          onPressed:() => Get.to(const MainScreen()),
              style: ButtonStyle(
              elevation:const MaterialStatePropertyAll(0),
              minimumSize: MaterialStateProperty.all<Size>(const Size(300, 55)),

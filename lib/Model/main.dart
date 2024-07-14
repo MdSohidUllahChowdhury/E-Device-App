@@ -1,4 +1,5 @@
-import 'package:e_shopping_app/View/Intro Screen/spalsh.dart';
+//import 'package:e_shopping_app/View/Intro Screen/spalsh.dart';
+import 'package:e_shopping_app/View/Main Screen/mainscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -16,7 +17,7 @@ class E_Shopping_App extends StatelessWidget {
       designSize: const Size(360,720),
       child:  GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home:const SplashScreen(),
+        home:const MainScreen(),
         theme:ThemeData(
           fontFamily: 'CustomFont'
         )

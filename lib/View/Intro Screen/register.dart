@@ -67,7 +67,7 @@ class Register extends StatelessWidget {
           onPressed: (){
             if(formkey.currentState!.validate())
              {
-              Get.to(const Login());
+              Get.offAll(const Login());
               }
             }, 
              style: ButtonStyle(

@@ -27,7 +27,7 @@ class SectionName extends StatelessWidget {
                } : 
                null,
 
-               obscureText: forpassword ?? false,
+               obscureText: forpassword ?? false, 
                decoration: InputDecoration(
                 filled: true,
                 fillColor: const Color.fromARGB(213, 190, 186, 186),
@@ -39,9 +39,9 @@ class SectionName extends StatelessWidget {
                 border:  OutlineInputBorder(
                   borderRadius: BorderRadius.circular(16),
                   borderSide: BorderSide.none
-                  ),          
+                  ),
               ),
             ),
           );
-}
-  }
+        }
+      }
