@@ -46,6 +46,7 @@ class MainScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              
               const Text('Hello Shakil 👋',
               style:TextStyle(
                 fontSize: 25,
@@ -54,6 +55,7 @@ class MainScreen extends StatelessWidget {
                 letterSpacing: 1.1,
                ) ,
               ),
+              
               const Text("Let's start shopping",
               style:TextStyle(
                 fontSize: 12,
@@ -62,6 +64,7 @@ class MainScreen extends StatelessWidget {
                 letterSpacing: 1.1,
                ) ,
               ),
+              
               const SizedBox(height: 20),
         
               CarouselSlider.builder(
@@ -91,7 +94,9 @@ class MainScreen extends StatelessWidget {
                 ),
                ) ,
              ),
+              
               const SizedBox(height: 15),
+              
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -103,7 +108,8 @@ class MainScreen extends StatelessWidget {
                 letterSpacing: 1.1,
                ) ,
               ),
-              GestureDetector(
+               
+               GestureDetector(
                 onTap: (){},
                 child: const Text('See All',
                 style:TextStyle(
@@ -113,13 +119,13 @@ class MainScreen extends StatelessWidget {
                   letterSpacing: 1.1,
                  ) ,
                 ),
-              ),
-              
+               ),
               ],
-              ),
+            ),
+              
               const SizedBox(height: 15),
               
-             const SingleChildScrollView(
+              const SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
@@ -150,7 +156,8 @@ class MainScreen extends StatelessWidget {
               ),
               itemBuilder:(context, index) {
                 return const Productcard();
-              }, )
+              },
+             )
             ],
           ),
         ),
