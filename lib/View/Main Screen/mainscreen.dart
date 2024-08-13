@@ -3,6 +3,7 @@ import 'package:e_shopping_app/Widgets/categorisIcon.dart';
 import 'package:e_shopping_app/Widgets/drawer.dart';
 import 'package:e_shopping_app/Widgets/productCard.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 
 
@@ -20,7 +21,7 @@ class MainScreen extends StatelessWidget {
    ];
    
     return Scaffold(
-      backgroundColor:const Color.fromARGB(167, 243, 203, 203),
+      backgroundColor:const Color.fromARGB(113, 255, 251, 251),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -49,8 +50,8 @@ class MainScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               
-              const Text('Hello Shakil!👋',
-              style:TextStyle(
+               Text('Wel'.tr,
+              style:const TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w600,
                 color: Colors.black,
@@ -58,8 +59,8 @@ class MainScreen extends StatelessWidget {
                ) ,
               ),
               
-              const Text("Let's start shopping",
-              style:TextStyle(
+               Text("Sub".tr,
+              style:const TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w600,
                 color: Color.fromARGB(136, 0, 0, 0),
@@ -102,8 +103,8 @@ class MainScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                const Text('Top Categoris',
-                style:TextStyle(
+                Text('Categoris'.tr,
+                style:const TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w600,
                 color: Colors.black,
@@ -113,8 +114,8 @@ class MainScreen extends StatelessWidget {
                
                GestureDetector(
                 onTap: (){},
-                child: const Text('See All',
-                style:TextStyle(
+                child:  Text('See'.tr,
+                style:const TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w400,
                   color: Colors.blue,

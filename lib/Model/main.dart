@@ -1,3 +1,4 @@
+import 'package:e_shopping_app/Controller/languageController.dart';
 import 'package:e_shopping_app/View/Intro%20Screen/spalsh.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,6 +16,9 @@ class E_Shopping_App extends StatelessWidget {
     return  ScreenUtilInit(
       designSize: const Size(360,720),
       child:  GetMaterialApp(
+        locale:const Locale('Eng'),
+        fallbackLocale:const Locale('Eng'),
+        translations: Language(),
         debugShowCheckedModeBanner: false,
         home:const SplashScreen(),
         theme:ThemeData(

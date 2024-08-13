@@ -16,12 +16,14 @@ Widget  customDrawer (){
         ),
         
         ListTile(
-          onTap:()=>Get.to(const LAnguage()) ,
+          onTap:()=>Get.bottomSheet(
+            language()
+          ),
           leading:const Icon(Icons.language_rounded),
           title:const  Text('L a n g u a g e'),
         ),
         ListTile(
-          onTap:()=>Get.back(),
+          onTap: () => Get.back(),
           leading:const Icon(Icons.settings),
           title:const  Text('S e t t i n g'),
         ),
