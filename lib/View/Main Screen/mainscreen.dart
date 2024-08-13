@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_shopping_app/Widgets/categorisIcon.dart';
+import 'package:e_shopping_app/Widgets/drawer.dart';
 import 'package:e_shopping_app/Widgets/productCard.dart';
 import 'package:flutter/material.dart';
 
@@ -10,21 +11,20 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
    List<String> slidercontend = [
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9uOLe6qkFSDc48cLCjsWInqWrLSkiB7IDNj8CUVgTbQ&s',
     'https://cdn.dribbble.com/users/2951446/screenshots/6361953/smuti-slider_still_2x.gif?resize=400x0',
     'https://3.bp.blogspot.com/-LKgDoJZfEyU/UBKXUIALobI/AAAAAAAAAjk/dafHbDYzH_w/s1600/healthy+food.jpg',
     'https://ucarecdn.com/1579f3d3-4ab2-40a9-9015-679d18eeeadb/-/crop/1630x918/1,0/-/preview/-/quality/lighter/-/format/auto/-/scale_crop/1920x1080/center/',
    ];
+   
     return Scaffold(
       backgroundColor:const Color.fromARGB(167, 243, 203, 203),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: IconButton(
-         onPressed: (){},
-         icon:const Icon(Icons.sort_sharp),
-         ),
+        
 
          actions: [
           IconButton(
@@ -38,6 +38,8 @@ class MainScreen extends StatelessWidget {
          ],
       ),
 
+      drawer:customDrawer(),
+
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
@@ -47,7 +49,7 @@ class MainScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               
-              const Text('Hello Shakil 👋',
+              const Text('Hello Shakil!👋',
               style:TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w600,
