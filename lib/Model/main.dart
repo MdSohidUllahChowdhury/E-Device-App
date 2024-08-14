@@ -13,12 +13,15 @@ class E_Shopping_App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return  ScreenUtilInit(
       designSize: const Size(360,720),
       child:  GetMaterialApp(
+
         locale:const Locale('Eng'),
         fallbackLocale:const Locale('Eng'),
         translations: Language(),
+
         debugShowCheckedModeBanner: false,
         home:const SplashScreen(),
         theme:ThemeData(

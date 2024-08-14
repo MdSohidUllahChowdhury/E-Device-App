@@ -1,4 +1,3 @@
-import 'package:e_shopping_app/View/Main%20Screen/mainscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -27,7 +26,14 @@ Widget language() {
             ElevatedButton(
               onPressed: () {
                 Get.updateLocale(const Locale('Ban'));
-                Get.to(const MainScreen());
+                Get.snackbar(
+                  'Successful',
+                  'Your Language is Bangla',
+                  duration:const Duration(seconds: 5),
+                  padding:const EdgeInsets.all(25),
+                  margin: const EdgeInsets.all(10),
+                  borderRadius: 16,
+                  snackPosition: SnackPosition.BOTTOM );
               },
               style: ButtonStyle(
                 minimumSize:
@@ -42,7 +48,13 @@ Widget language() {
             ElevatedButton(
               onPressed: () {
                 Get.updateLocale(const Locale('Eng'));
-                Get.to(const MainScreen());
+                 Get.snackbar(
+                  'Successful',
+                  'Your Language is English',
+                  duration:const Duration(seconds: 5),
+                  padding:const EdgeInsets.all(10),
+                  borderRadius: 16,
+                  snackPosition: SnackPosition.BOTTOM );
               },
               style: ButtonStyle(
                 minimumSize:
