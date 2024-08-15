@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:e_shopping_app/Controller/counter_laptop.dart';
 import 'package:e_shopping_app/Controller/payment_system.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -81,8 +82,9 @@ class ProductDetails extends StatelessWidget {
                    ) ,
                   ), 
             
+            const SizedBox(height:10),
+            quantity(),
             const SizedBox(height:35),
-            
              payBill(),           
           ],
         ),

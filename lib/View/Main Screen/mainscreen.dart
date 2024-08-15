@@ -22,7 +22,8 @@ class MainScreen extends StatelessWidget {
    
     return Scaffold(
       backgroundColor:const Color.fromARGB(113, 255, 251, 251),
-      appBar: AppBar(
+      
+      appBar:AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         
@@ -37,7 +38,7 @@ class MainScreen extends StatelessWidget {
          icon:const Icon(Icons.person),
          ),
          ],
-      ),
+      ), 
 
       drawer:customDrawer(),
 
@@ -148,7 +149,7 @@ class MainScreen extends StatelessWidget {
             const SizedBox(height: 15),
            
             GridView.builder(
-              itemCount: 6,
+              itemCount:15,
               shrinkWrap: true,
               primary: false,
               gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(

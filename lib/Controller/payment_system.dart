@@ -1,4 +1,3 @@
-import 'package:e_shopping_app/View/Main%20Screen/mainscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -46,7 +45,9 @@ Widget payBill() {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Get.bottomSheet(Container(
+                  Get.back();
+                  Get.bottomSheet(
+                    Container(
                     height: 200,
                     margin: const EdgeInsets.all(10),
                     decoration: const BoxDecoration(
@@ -57,8 +58,8 @@ Widget payBill() {
                         ListTile(
                           onTap: () {
                             Get.snackbar('Payment Successfull', 'By Bkash',
-                                snackPosition: SnackPosition.BOTTOM);
-                            Get.off(const MainScreen());
+                                snackPosition: SnackPosition.TOP);
+                            
                           },
                           leading: const Icon(Icons.payment),
                           title: const Text('Bkash'),
@@ -69,8 +70,8 @@ Widget payBill() {
                         ListTile(
                           onTap: () {
                             Get.snackbar('Payment Successfull', 'By Nogod',
-                                snackPosition: SnackPosition.BOTTOM);
-                            Get.off(const MainScreen());
+                                snackPosition: SnackPosition.TOP);
+                            
                           },
                           leading: const Icon(Icons.payment),
                           title: const Text('Nogod'),
