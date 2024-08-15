@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:e_shopping_app/Controller/payment_system.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,13 +10,14 @@ class ProductDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:const Color.fromARGB(167, 243, 203, 203),
+      backgroundColor:const Color.fromARGB(113, 255, 251, 251),
       body:Container(
         padding:const EdgeInsets.all(6),
         margin: const EdgeInsets.all(8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            
             Center(
               child: IconButton(
                 onPressed:() => Get.back(),
@@ -67,7 +69,9 @@ class ProductDetails extends StatelessWidget {
                       ],
                     ),
                  ),
+
              const SizedBox(height:10),   
+             
              const Text('Key Features\nMPN: 973R0PA\nModel: 15-fd0205TU\nProcessor: Intel Core i5-1335U (up to 4.6 GHz, 12 MB L3 cache)\nRAM: 8 GB DDR4 3200MHz, Storage: 512GB PCIe M.2 SSD\nDisplay: 15.6" FHD (1920 x 1080)\nFeatures: Type-C, Wi-Fi 6, Privacy Shutter, Mic Mute Key',
                   style:TextStyle(
                     fontSize:9.6,
@@ -76,24 +80,10 @@ class ProductDetails extends StatelessWidget {
                     letterSpacing: 1.1,
                    ) ,
                   ), 
-            const SizedBox(height: 15),
             
-            ElevatedButton(
-             onPressed:(){},
-             style: ButtonStyle(
-             elevation:const MaterialStatePropertyAll(0),
-             minimumSize: MaterialStateProperty.all<Size>(const Size(300, 55)),
-             backgroundColor: MaterialStateProperty.all<Color>(
-              const Color.fromARGB(232, 243, 229, 33)),
-           ),
-
-          child:const Text('Buy Now',
-          style: TextStyle(
-            fontSize: 14,
-            color:Colors.white,
-            fontWeight: FontWeight.w600),
-          ),
-          ),            
+            const SizedBox(height:35),
+            
+             payBill(),           
           ],
         ),
       ),
