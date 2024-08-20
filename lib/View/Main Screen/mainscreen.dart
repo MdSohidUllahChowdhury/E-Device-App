@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:e_shopping_app/View/Setting%20Screen/profile.dart';
 import 'package:e_shopping_app/Widgets/categorisIcon.dart';
 import 'package:e_shopping_app/Widgets/drawer.dart';
 import 'package:e_shopping_app/Widgets/productCard.dart';
@@ -30,11 +31,16 @@ class MainScreen extends StatelessWidget {
 
          actions: [
           IconButton(
-         onPressed: (){},
+         onPressed: (){
+          Get.snackbar('Developing Mood',
+           'Currently Working on this Option');
+         },
          icon:const Icon(Icons.search),
          ),
          IconButton(
-         onPressed: (){},
+         onPressed: (){
+          Get.to(const ProfileSet());
+         },
          icon:const Icon(Icons.person),
          ),
          ],

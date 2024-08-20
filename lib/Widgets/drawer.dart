@@ -19,7 +19,9 @@ Widget  customDrawer (){
           onTap:()=>Get.bottomSheet(
             language()
           ),
-          leading:const Icon(Icons.language_rounded),
+          leading:const Icon(
+            Icons.language_rounded,
+            color: Colors.green),
           title:const  Text('L a n g u a g e'),
         ),
         ListTile(
