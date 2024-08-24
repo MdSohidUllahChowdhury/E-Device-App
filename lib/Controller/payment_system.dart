@@ -5,7 +5,7 @@ Widget payBill() {
   return ElevatedButton(
     onPressed: () {
       Get.bottomSheet(Container(
-          height: 500,
+          height: 400,
           width: 300,
           margin: const EdgeInsets.all(16),
           padding: const EdgeInsets.all(8),
@@ -46,8 +46,7 @@ Widget payBill() {
               ElevatedButton(
                 onPressed: () {
                   Get.back();
-                  Get.bottomSheet(
-                    Container(
+                  Get.bottomSheet(Container(
                     height: 200,
                     margin: const EdgeInsets.all(10),
                     decoration: const BoxDecoration(
@@ -59,7 +58,6 @@ Widget payBill() {
                           onTap: () {
                             Get.snackbar('Payment Successfull', 'By Bkash',
                                 snackPosition: SnackPosition.TOP);
-                            
                           },
                           leading: const Icon(Icons.payment),
                           title: const Text('Bkash'),
@@ -71,7 +69,6 @@ Widget payBill() {
                           onTap: () {
                             Get.snackbar('Payment Successfull', 'By Nogod',
                                 snackPosition: SnackPosition.TOP);
-                            
                           },
                           leading: const Icon(Icons.payment),
                           title: const Text('Nogod'),
@@ -91,8 +88,8 @@ Widget payBill() {
                   'Pay Bill',
                   style: TextStyle(
                       fontSize: 12,
-                      letterSpacing: 1.5,
-                      color: Colors.white,
+                      letterSpacing: 1.4,
+                      color: Colors.black,
                       fontWeight: FontWeight.w600),
                 ),
               )
@@ -110,7 +107,7 @@ Widget payBill() {
       style: TextStyle(
           fontSize: 18,
           letterSpacing: 1.5,
-          color: Colors.white,
+          color: Colors.black,
           fontWeight: FontWeight.w600),
     ),
   );

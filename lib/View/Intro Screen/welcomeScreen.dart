@@ -35,7 +35,7 @@ class WelcomeScreen extends StatelessWidget {
               child: Text('Explore all the existing job roles based on your\ninterest and study major',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 9,
+                fontSize: 10,
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1.4
@@ -59,6 +59,7 @@ class WelcomeScreen extends StatelessWidget {
              child:const Text('Login',
               style: TextStyle(
               fontSize: 14,
+              letterSpacing: 1.2,
               color:Colors.white,
               fontWeight: FontWeight.bold),
               ),
@@ -76,6 +77,7 @@ class WelcomeScreen extends StatelessWidget {
               style: TextStyle(
               fontSize: 14,
               color:Colors.black,
+              letterSpacing: 1.2,
               fontWeight: FontWeight.bold),
               ),
             ),

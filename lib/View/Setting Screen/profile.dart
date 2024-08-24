@@ -18,6 +18,7 @@ return Scaffold(
          const Text('Profile Setup',
           style: TextStyle(
             fontSize: 27,
+            letterSpacing: 1.4,
             color: Color.fromARGB(232, 33, 149, 243),
             fontWeight: FontWeight.bold,
            ),
@@ -28,7 +29,7 @@ return Scaffold(
           const Text("Please fill be below details to complete\nyour profile",
           textAlign: TextAlign.center,
            style: TextStyle(
-            fontSize: 9,
+            fontSize: 10,
             color: Colors.black,
             fontWeight: FontWeight.bold,
             letterSpacing: 1.4
@@ -83,8 +84,9 @@ return Scaffold(
           child:const Text('Complete Setup',
           style: TextStyle(
             fontSize: 14,
+            letterSpacing: 1.2,
             color:Colors.white,
-            fontWeight: FontWeight.w600),
+            fontWeight: FontWeight.bold),
            ),
           ),
          

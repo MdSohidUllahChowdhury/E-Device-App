@@ -20,6 +20,7 @@ class Register extends StatelessWidget {
           
          const Text('Create Account',
           style: TextStyle(
+            letterSpacing: 1.4,
             fontSize: 27,
             color: Color.fromARGB(232, 33, 149, 243),
             fontWeight: FontWeight.bold,
@@ -31,7 +32,7 @@ class Register extends StatelessWidget {
           const Text("Create an account so you can explore all the\nexisting jobs",
           textAlign: TextAlign.center,
            style: TextStyle(
-            fontSize: 9,
+            fontSize: 10,
             color: Colors.black,
             fontWeight: FontWeight.bold,
             letterSpacing: 1.4
@@ -80,8 +81,9 @@ class Register extends StatelessWidget {
           child:const Text('Sing Up',
           style: TextStyle(
             fontSize: 14,
+            letterSpacing: 1.2,
             color:Colors.white,
-            fontWeight: FontWeight.w600),
+            fontWeight: FontWeight.bold),
            ),
           ),
               
@@ -90,11 +92,12 @@ class Register extends StatelessWidget {
           ),
          
           const SizedBox(height:16),
+         
           TextButton(
             onPressed:() => Get.to(const Login()),
-            child:const Text('Already have an account',
+            child:const Text('Already Have an Account?',
             style: TextStyle(
-              fontSize: 9,
+              fontSize: 10,
               color: Colors.black,
               fontWeight: FontWeight.bold,
               letterSpacing: 1.4

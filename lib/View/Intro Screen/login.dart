@@ -18,9 +18,10 @@ class Login extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           
-         const Text('Login here',
+         const Text('Login Here',
           style: TextStyle(
             fontSize: 27,
+            letterSpacing: 1.4,
             color: Color.fromARGB(232, 33, 149, 243),
             fontWeight: FontWeight.bold,
             ),
@@ -30,7 +31,7 @@ class Login extends StatelessWidget {
           const Text("Welcome back you've\nbeen missed!",
           textAlign: TextAlign.center,
            style: TextStyle(
-            fontSize: 9,
+            fontSize: 10,
             color: Colors.black,
             fontWeight: FontWeight.bold,
             letterSpacing: 1.4
@@ -63,7 +64,7 @@ class Login extends StatelessWidget {
           style: TextStyle(
             fontSize: 10,
             color: Color.fromARGB(232, 33, 149, 243),
-            fontWeight: FontWeight.w700,
+            fontWeight: FontWeight.w500,
             letterSpacing: 1.4
            ),
           ),
@@ -87,14 +88,15 @@ class Login extends StatelessWidget {
 
           child:const Text('Sing in',
           style: TextStyle(
-            fontSize: 14,
+            fontSize: 15,
             color:Colors.white,
+            letterSpacing: 1.2,
             fontWeight: FontWeight.w600),
           ),
           ),
             
-              ],
-            ),
+          ],
+          ),
           ),
 
          
@@ -103,9 +105,9 @@ class Login extends StatelessWidget {
           
           TextButton(
             onPressed:() => Get.to(const Register()),
-            child:const Text('Create new account',
+            child:const Text('Create New Account',
             style: TextStyle(
-              fontSize: 9,
+              fontSize: 10,
               color: Colors.black,
               fontWeight: FontWeight.bold,
               letterSpacing: 1.4

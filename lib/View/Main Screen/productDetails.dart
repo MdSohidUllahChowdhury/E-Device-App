@@ -11,7 +11,7 @@ class ProductDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:const Color.fromARGB(113, 255, 251, 251),
+     
       body:Container(
         padding:const EdgeInsets.all(6),
         margin: const EdgeInsets.all(8),
@@ -26,7 +26,7 @@ class ProductDetails extends StatelessWidget {
             ),
 
              Image.asset('lib/Assets/Images/laptop.png',
-                  height:300,
+                  height:250,
                   width: double.infinity,),
 
              const Text('HP 15-fd0205TU Core i5 13th Gen 15.6"',
@@ -36,6 +36,7 @@ class ProductDetails extends StatelessWidget {
                     fontWeight: FontWeight.w800,
                     color: Colors.black,
                     letterSpacing: 1.1,
+                    
                    ) ,
                   ),
                 
@@ -70,13 +71,14 @@ class ProductDetails extends StatelessWidget {
                       ],
                     ),
                  ),
-
-             const SizedBox(height:10),   
+            
+            const Divider(height: 10,),
              
-             const Text('Key Features\nMPN: 973R0PA\nModel: 15-fd0205TU\nProcessor: Intel Core i5-1335U (up to 4.6 GHz, 12 MB L3 cache)\nRAM: 8 GB DDR4 3200MHz, Storage: 512GB PCIe M.2 SSD\nDisplay: 15.6" FHD (1920 x 1080)\nFeatures: Type-C, Wi-Fi 6, Privacy Shutter, Mic Mute Key',
+             
+             const Text('Key Features\n\nMPN: 973R0PA\nModel: 15-fd0205TU\nProcessor: Intel Core i5-1335U (up to 4.6 GHz, 12 MB L3 cache)\nRAM: 8 GB DDR4 3200MHz, Storage: 512GB PCIe M.2 SSD\nDisplay: 15.6" FHD (1920 x 1080)\nFeatures: Type-C, Wi-Fi 6, Privacy Shutter, Mic Mute Key',
                   style:TextStyle(
                     fontSize:9.6,
-                    fontWeight: FontWeight.w800,
+                    fontWeight: FontWeight.bold,
                     color: Color.fromARGB(186, 0, 0, 0),
                     letterSpacing: 1.1,
                    ) ,
@@ -84,7 +86,7 @@ class ProductDetails extends StatelessWidget {
             
             const SizedBox(height:10),
             quantity(),
-            const SizedBox(height:35),
+            const SizedBox(height:30),
              payBill(),           
           ],
         ),

@@ -22,9 +22,9 @@ class MainScreen extends StatelessWidget {
    ];
    
     return Scaffold(
-      backgroundColor:const Color.fromARGB(113, 255, 251, 251),
       
       appBar:AppBar(
+
         backgroundColor: Colors.transparent,
         elevation: 0,
         
@@ -44,6 +44,7 @@ class MainScreen extends StatelessWidget {
          icon:const Icon(Icons.person),
          ),
          ],
+
       ), 
 
       drawer:customDrawer(),
@@ -62,7 +63,7 @@ class MainScreen extends StatelessWidget {
                 fontSize: 25,
                 fontWeight: FontWeight.w600,
                 color: Colors.black,
-                letterSpacing: 1.1,
+                letterSpacing: 1.2,
                ) ,
               ),
               
@@ -71,7 +72,7 @@ class MainScreen extends StatelessWidget {
                 fontSize: 12,
                 fontWeight: FontWeight.w600,
                 color: Color.fromARGB(136, 0, 0, 0),
-                letterSpacing: 1.1,
+                letterSpacing: 1.2,
                ) ,
               ),
               
@@ -79,7 +80,7 @@ class MainScreen extends StatelessWidget {
         
               CarouselSlider.builder(
                options: CarouselOptions(
-                height: 170,
+                height: 160,
                 aspectRatio: 16/9,
                 viewportFraction: 0.8,
                 initialPage: 0,
@@ -115,7 +116,7 @@ class MainScreen extends StatelessWidget {
                 fontSize: 15,
                 fontWeight: FontWeight.w600,
                 color: Colors.black,
-                letterSpacing: 1.1,
+                letterSpacing: 1.2,
                ) ,
               ),
                
@@ -126,7 +127,7 @@ class MainScreen extends StatelessWidget {
                   fontSize: 12,
                   fontWeight: FontWeight.w400,
                   color: Colors.blue,
-                  letterSpacing: 1.1,
+                  letterSpacing: 1.2,
                  ) ,
                 ),
                ),
