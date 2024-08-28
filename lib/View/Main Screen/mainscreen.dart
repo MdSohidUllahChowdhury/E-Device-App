@@ -1,8 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:e_shopping_app/Model/divice_model.dart';
+import 'package:e_shopping_app/View/Main%20Screen/productDetails.dart';
 import 'package:e_shopping_app/View/Setting%20Screen/profile.dart';
 import 'package:e_shopping_app/Widgets/categorisIcon.dart';
 import 'package:e_shopping_app/Widgets/drawer.dart';
-import 'package:e_shopping_app/Widgets/productCard.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,6 +14,44 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+   List <DeviceModel> product = [
+    DeviceModel(
+      productPic: 'lib/Assets/Images/laptop.png',
+      brandName: 'Mac Note Book M4', 
+      withOutOfferPrice: '\$16,800', 
+      withOfferPrice: '\$14,800', 
+      ),
+    DeviceModel(
+      productPic: 'lib/Assets/Images/laptop.png',
+      brandName: 'HP Note Book A02', 
+      withOutOfferPrice: '\$16,800', 
+      withOfferPrice: '\$14,800', 
+      ),
+    DeviceModel(
+      productPic: 'lib/Assets/Images/laptop.png',
+      brandName: 'Mac Note Book M4', 
+      withOutOfferPrice: '\$16,800', 
+      withOfferPrice: '\$14,800', 
+      ),
+    DeviceModel(
+      productPic: 'lib/Assets/Images/laptop.png',
+      brandName: 'HP Note Book A02', 
+      withOutOfferPrice: '\$16,800', 
+      withOfferPrice: '\$14,800', 
+      ),
+    DeviceModel(
+      productPic: 'lib/Assets/Images/laptop.png',
+      brandName: 'Mac Note Book M4', 
+      withOutOfferPrice: '\$16,800', 
+      withOfferPrice: '\$14,800', 
+      ),
+    DeviceModel(
+      productPic: 'lib/Assets/Images/laptop.png',
+      brandName: 'HP Note Book A02', 
+      withOutOfferPrice: '\$16,800', 
+      withOfferPrice: '\$14,800', 
+      ),
+  ];
 
    List<String> slidercontend = [
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9uOLe6qkFSDc48cLCjsWInqWrLSkiB7IDNj8CUVgTbQ&s',
@@ -156,7 +195,7 @@ class MainScreen extends StatelessWidget {
             const SizedBox(height: 15),
            
             GridView.builder(
-              itemCount:15,
+              itemCount:product.length,
               shrinkWrap: true,
               primary: false,
               gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(
@@ -166,7 +205,102 @@ class MainScreen extends StatelessWidget {
               childAspectRatio: .9
               ),
               itemBuilder:(context, index) {
-                return const Productcard();
+                final iteam = product[index];
+                return InkWell(
+      
+      onTap: () => Get.to(const ProductDetails()),
+      child: Container(
+        
+        decoration: BoxDecoration(
+            color: const Color.fromARGB(209, 189, 167, 167),
+            borderRadius: BorderRadius.circular(12),
+            ),
+            child: Stack(
+              
+              children:[ 
+                
+                Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(iteam.productPic,
+                  height:140,
+                  width: double.infinity,),
+                  
+                   Text(iteam.brandName,
+                  style:const TextStyle(
+                    fontSize:12.5,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                    letterSpacing: 1.1,
+                   ) ,
+                  ),
+                
+                const SizedBox(height:2),
+                
+                Padding(
+                   padding: const EdgeInsets.symmetric(horizontal: 10),
+                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(iteam.withOfferPrice,
+                        textAlign: TextAlign.left,
+                        style:const TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 0, 0, 0),
+                          letterSpacing: 1.1,
+                         ) ,
+                        ),
+                        Text(iteam.withOutOfferPrice,
+                        textAlign: TextAlign.left,
+                        style:const TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(178, 0, 0, 0),
+                          letterSpacing: 1.1,
+                          decoration: TextDecoration.lineThrough
+                         ) ,
+                        ),
+                      ],
+                    ),
+                 ),
+                ],
+              ),
+             
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                      margin:const EdgeInsets.all(8),
+                      height:13,
+                      width: 90,
+                      decoration: BoxDecoration(
+                        color:const Color.fromARGB(253, 255, 255, 255),
+                        borderRadius: BorderRadius.circular(16)
+                      ),
+                     child:  const Text('23% Discount',
+                     textAlign: TextAlign.center,
+                    style:TextStyle(
+                      fontSize:9,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.redAccent,
+                      letterSpacing: 1.1,
+                     ) ,
+                    ),
+                    ),
+                  
+                  IconButton(
+                    onPressed:(){
+                      
+                    },
+                    icon:const Icon(Icons.favorite_border)
+                    )
+                ],
+              ),
+             ]
+            ),
+         ),
+    );
               },
              )
             ],

@@ -1,5 +1,4 @@
 // ignore_for_file: file_names
-
 import 'package:e_shopping_app/View/Main%20Screen/productDetails.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,15 +7,20 @@ class Productcard extends StatelessWidget {
   const Productcard({super.key});
 
   @override
+ 
   Widget build(BuildContext context) {
+
     return InkWell(
+      
       onTap: () => Get.to(const ProductDetails()),
       child: Container(
+        
         decoration: BoxDecoration(
             color: const Color.fromARGB(209, 189, 167, 167),
             borderRadius: BorderRadius.circular(12),
             ),
             child: Stack(
+              
               children:[ 
                 
                 Column(
@@ -42,7 +46,7 @@ class Productcard extends StatelessWidget {
                    child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("\$1120",
+                        Text('\$14,800',
                         textAlign: TextAlign.left,
                         style:TextStyle(
                           fontSize: 11,
@@ -51,7 +55,7 @@ class Productcard extends StatelessWidget {
                           letterSpacing: 1.1,
                          ) ,
                         ),
-                        Text("\$1420",
+                        Text('\$16,800',
                         textAlign: TextAlign.left,
                         style:TextStyle(
                           fontSize: 11,
@@ -78,7 +82,7 @@ class Productcard extends StatelessWidget {
                         color:const Color.fromARGB(253, 255, 255, 255),
                         borderRadius: BorderRadius.circular(16)
                       ),
-                     child:  const Text('50% Discount',
+                     child:  const Text('23% Discount',
                      textAlign: TextAlign.center,
                     style:TextStyle(
                       fontSize:9,
