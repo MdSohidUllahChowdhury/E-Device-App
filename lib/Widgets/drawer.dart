@@ -3,7 +3,7 @@ import 'package:e_shopping_app/View/Setting%20Screen/language.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-Widget  customDrawer (){
+Widget  customDrawer(){
  return Drawer(
   elevation: 50,
   backgroundColor: const Color.fromARGB(209, 189, 167, 167),

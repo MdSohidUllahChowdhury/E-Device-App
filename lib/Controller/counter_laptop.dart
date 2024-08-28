@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-Widget quantity (){
+Widget quantity(){
   var iteams = 0.obs;
 return Row(
   mainAxisAlignment: MainAxisAlignment.center,
