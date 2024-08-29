@@ -4,7 +4,8 @@ import 'package:get/get.dart';
 Widget payBill() {
   return ElevatedButton(
     onPressed: () {
-      Get.bottomSheet(Container(
+      Get.bottomSheet(
+        Container(
           height: 400,
           width: 300,
           margin: const EdgeInsets.all(16),
@@ -46,7 +47,8 @@ Widget payBill() {
               ElevatedButton(
                 onPressed: () {
                   Get.back();
-                  Get.bottomSheet(Container(
+                  Get.bottomSheet(
+                    Container(
                     height: 200,
                     margin: const EdgeInsets.all(10),
                     decoration: const BoxDecoration(

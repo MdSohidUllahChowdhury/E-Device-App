@@ -29,7 +29,7 @@ class Register extends StatelessWidget {
           
           const SizedBox(height: 15),
 
-          const Text("Create an account so you can explore all the\nexisting jobs",
+          const Text("Create an account so you can explore all the\nexisting devices",
           textAlign: TextAlign.center,
            style: TextStyle(
             fontSize: 10,
@@ -68,8 +68,8 @@ class Register extends StatelessWidget {
           onPressed: (){
             if(formkey.currentState!.validate())
              {
-              Get.offAll(const Login());
-              }
+                Get.offAll(const Login());
+             }
             }, 
              style: ButtonStyle(
              elevation:const MaterialStatePropertyAll(0),

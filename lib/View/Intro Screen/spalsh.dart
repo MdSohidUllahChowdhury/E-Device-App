@@ -28,12 +28,12 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor:Color.fromARGB(232, 0, 0, 0),
-      body: Center(
+    return  Scaffold(
+      backgroundColor:Colors.grey.shade300,
+      body: const Center(
         child: Text('MONEY OR LOVE\nBRAIN OR HEART',
         style:TextStyle(
-          color: Color.fromARGB(255, 110, 247, 115),
+          color: Color.fromARGB(232, 33, 149, 243),
           fontSize: 25,
           fontWeight: FontWeight.bold,
           letterSpacing: 1.4

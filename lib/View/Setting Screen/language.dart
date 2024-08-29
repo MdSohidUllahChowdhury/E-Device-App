@@ -3,11 +3,11 @@ import 'package:get/get.dart';
 
 Widget language() {
   return Container(
-    height: 320,
+    height:280,
     width: 250,
     decoration: BoxDecoration(
-      color: const Color.fromARGB(211, 255, 255, 255),
-      borderRadius: BorderRadius.circular(16),
+      color: Colors.grey.shade300,
+      borderRadius: BorderRadius.circular(24),
     ),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -29,11 +29,12 @@ Widget language() {
                 Get.snackbar(
                   'Successful',
                   'Your Language is Bangla',
-                  duration:const Duration(seconds: 5),
+                  
+                  duration:const Duration(seconds:5),
                   padding:const EdgeInsets.all(25),
                   margin: const EdgeInsets.all(10),
                   borderRadius: 16,
-                  snackPosition: SnackPosition.BOTTOM );
+                  snackPosition: SnackPosition.TOP);
               },
               style: ButtonStyle(
                 minimumSize:
@@ -54,7 +55,7 @@ Widget language() {
                   duration:const Duration(seconds: 5),
                   padding:const EdgeInsets.all(10),
                   borderRadius: 16,
-                  snackPosition: SnackPosition.BOTTOM );
+                  snackPosition: SnackPosition.TOP);
               },
               style: ButtonStyle(
                 minimumSize:

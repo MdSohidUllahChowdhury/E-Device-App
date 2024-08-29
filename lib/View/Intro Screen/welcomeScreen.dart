@@ -20,7 +20,7 @@ class WelcomeScreen extends StatelessWidget {
           width: double.infinity,
           ),
           const SizedBox(height: 30),
-          const Text('Discover Your\nDream Job Here',
+          const Text('Discover Your\nDream Device Here',
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 27,
@@ -32,7 +32,7 @@ class WelcomeScreen extends StatelessWidget {
           const SizedBox(height:15),
           const Center(
             child: Center(
-              child: Text('Explore all the existing job roles based on your\ninterest and study major',
+              child: Text('Explore all the existing devices based on your\ninterest and yor perfection',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 10,
@@ -66,7 +66,9 @@ class WelcomeScreen extends StatelessWidget {
             ),
 
            ElevatedButton(
-             onPressed:() => Get.to(const Register()),
+             onPressed: (){
+              Get.to(const Register());
+             },
              style: ButtonStyle(
              elevation:const MaterialStatePropertyAll(0),
              minimumSize: MaterialStateProperty.all<Size>(const Size(140, 45)),
