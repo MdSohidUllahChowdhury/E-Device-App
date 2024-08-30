@@ -3,8 +3,7 @@
 # My App Overview
 
 
-![localhost_58833_(iPhone 12 Pro)](https://github.com/user-attachments/assets/d85cce15-ea64-4d06-9781-dc6d33c04e68)
-![localhost_58833_(iPhone 12 Pro) (1)](https://github.com/user-attachments/assets/447aa7f1-4592-4816-8f61-bbf84d3817a2)
+![localhost_58833_(iPhone 12 Pro)](https://github.com/user-attachments/assets/d85cce15-ea64-4d06-9781-dc6d33c04e68) ![localhost_58833_(iPhone 12 Pro) (1)](https://github.com/user-attachments/assets/447aa7f1-4592-4816-8f61-bbf84d3817a2)
 ![localhost_58833_(iPhone 12 Pro) (2)](https://github.com/user-attachments/assets/ec1d2292-a0c5-4fc6-a30f-7f935645d885)
 ![localhost_58833_(iPhone 12 Pro) (3)](https://github.com/user-attachments/assets/dc81f1a3-19e0-4382-b518-e6869270fd0a)
 ![localhost_58833_(iPhone 12 Pro) (4)](https://github.com/user-attachments/assets/662fbb30-f260-4963-abc7-f22582ab1180)
