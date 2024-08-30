@@ -1,8 +1,8 @@
-import 'package:e_shopping_app/Controller/utils.dart';
-import 'package:e_shopping_app/View/Setting%20Screen/profile.dart';
-import 'package:e_shopping_app/Widgets/ads_bord.dart';
-import 'package:e_shopping_app/Widgets/drawer.dart';
-import 'package:e_shopping_app/Widgets/product_add_on.dart';
+import 'package:e_device_app/Controller/utils.dart';
+import 'package:e_device_app/View/Setting%20Screen/profile.dart';
+import 'package:e_device_app/Widgets/ads_bord.dart';
+import 'package:e_device_app/Widgets/drawer.dart';
+import 'package:e_device_app/Widgets/product_add_on.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

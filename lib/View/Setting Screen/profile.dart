@@ -1,5 +1,5 @@
-import 'package:e_shopping_app/View/Main%20Screen/mainscreen.dart';
-import 'package:e_shopping_app/Widgets/textfield.dart';
+import 'package:e_device_app/View/Main Screen/mainscreen.dart';
+import 'package:e_device_app/Widgets/textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

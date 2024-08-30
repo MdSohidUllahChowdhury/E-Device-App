@@ -1,4 +1,4 @@
-import 'package:e_shopping_app/Widgets/categorisIcon.dart';
+import 'package:e_device_app/Widgets/categoris_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,5 +1,5 @@
-import 'package:e_shopping_app/Model/divice_model.dart';
-import 'package:e_shopping_app/View/Main%20Screen/productDetails.dart';
+import 'package:e_device_app/Model/divice_model.dart';
+import 'package:e_device_app/View/Main Screen/product_details.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,26 +14,38 @@ class ProductAddON extends StatelessWidget {
         brandName: 'Mac Note Book M4',
         withOutOfferPrice: '\$16,800',
         withOfferPrice: '\$14,800',
+        discount: '12% Off',
       ),
       DeviceModel(
         productPic: 'lib/Assets/Images/S24.png',
         brandName: 'Sumsung S24 Ultra',
         withOutOfferPrice: '\$1,800',
         withOfferPrice: '\$1,699',
+        discount: '18% Off',
       ),
       DeviceModel(
         productPic: 'lib/Assets/Images/13pro.png',
         brandName: 'Iphone 13 pro',
         withOutOfferPrice: '\$1,599',
         withOfferPrice: '\$1,499',
+        discount: '21% Off',
       ),
       DeviceModel(
         productPic: 'lib/Assets/Images/13.png',
         brandName: 'Iphone 13',
         withOutOfferPrice: '\$1,499',
         withOfferPrice: '\$1,399',
+        discount: '7% Off',
+      ),
+       DeviceModel(
+        productPic: 'lib/Assets/Images/S24.png',
+        brandName: 'Sumsung S24 Ultra',
+        withOutOfferPrice: '\$1,800',
+        withOfferPrice: '\$1,699',
+        discount: '18% Off',
       ),
     ];
+    
     return GridView.builder(
       itemCount: product.length,
       shrinkWrap: true,
@@ -41,25 +53,31 @@ class ProductAddON extends StatelessWidget {
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 6,
-          mainAxisSpacing: 4,
-          childAspectRatio: .9),
+          mainAxisSpacing: 6,
+          childAspectRatio: .87
+          ),
       itemBuilder: (context, index) {
         final iteam = product[index];
         return InkWell(
-          onTap: () => Get.to(const ProductDetails()),
+          onTap: () => Get.to(ProductDetails(
+            productImage: iteam.productPic,
+            brandName: iteam.brandName,
+            offerPrice: iteam.withOfferPrice,
+            noOfferPrice: iteam.withOutOfferPrice,
+          )),
           child: Container(
             decoration: BoxDecoration(
               color: const Color.fromARGB(209, 189, 167, 167),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(24),
             ),
-            child: Stack(children: [
-              Column(
+            child: Stack(
+              children: [
+               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
                     iteam.productPic,
-                    height: 140,
-                    width: double.infinity,
+                    height: 130,
                   ),
                   Text(
                     iteam.brandName,
@@ -72,7 +90,7 @@ class ProductAddON extends StatelessWidget {
                   ),
                   const SizedBox(height: 2),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal:12),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -80,7 +98,7 @@ class ProductAddON extends StatelessWidget {
                           iteam.withOfferPrice,
                           textAlign: TextAlign.left,
                           style: const TextStyle(
-                            fontSize: 11,
+                            fontSize: 10,
                             fontWeight: FontWeight.bold,
                             color: Color.fromARGB(255, 0, 0, 0),
                             letterSpacing: 1.1,
@@ -90,7 +108,7 @@ class ProductAddON extends StatelessWidget {
                           iteam.withOutOfferPrice,
                           textAlign: TextAlign.left,
                           style: const TextStyle(
-                              fontSize: 11,
+                              fontSize: 10,
                               fontWeight: FontWeight.bold,
                               color: Color.fromARGB(178, 0, 0, 0),
                               letterSpacing: 1.1,
@@ -101,20 +119,21 @@ class ProductAddON extends StatelessWidget {
                   ),
                 ],
               ),
+              
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     margin: const EdgeInsets.all(8),
                     height: 13,
-                    width: 90,
+                    width: 55,
                     decoration: BoxDecoration(
                         color: const Color.fromARGB(253, 255, 255, 255),
                         borderRadius: BorderRadius.circular(16)),
-                    child: const Text(
-                      '23% Discount',
+                    child:Text(
+                      iteam.discount,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style:const TextStyle(
                         fontSize: 9,
                         fontWeight: FontWeight.w600,
                         color: Colors.redAccent,
@@ -123,10 +142,13 @@ class ProductAddON extends StatelessWidget {
                     ),
                   ),
                   IconButton(
-                      onPressed: () {}, icon: const Icon(Icons.favorite_border))
+                      onPressed: () {}, 
+                      icon: const Icon(Icons.favorite_border,size: 15,)
+                    ),
                 ],
               ),
-            ]),
+             ]
+            ),
           ),
         );
       },

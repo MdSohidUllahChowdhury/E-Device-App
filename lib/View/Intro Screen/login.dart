@@ -1,6 +1,6 @@
-import 'package:e_shopping_app/View/Setting Screen/profile.dart';
-import 'package:e_shopping_app/View/Intro Screen/register.dart';
-import 'package:e_shopping_app/Widgets/textfield.dart';
+import 'package:e_device_app/View/Setting Screen/profile.dart';
+import 'package:e_device_app/View/Intro Screen/register.dart';
+import 'package:e_device_app/Widgets/textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

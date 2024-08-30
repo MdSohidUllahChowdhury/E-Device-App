@@ -1,30 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-Widget payBill() {
+Widget payBill(brandName, price) {
   return ElevatedButton(
     onPressed: () {
-      Get.bottomSheet(
-        Container(
+      Get.bottomSheet(Container(
           height: 400,
           width: 300,
           margin: const EdgeInsets.all(16),
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(24),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('Product Details 👇'),
+              const Text(
+                'Product Details 👇',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                  letterSpacing: 1.2,
+                ),
+              ),
               const SizedBox(
                 height: 30,
               ),
-              const Text(
-                'Laptop Model: HP 15-fd0205TU Core i5 13th Gen 15.6"',
-                style: TextStyle(
-                  fontSize: 9,
+              Text(
+                brandName,
+                style: const TextStyle(
+                  fontSize: 18,
                   fontWeight: FontWeight.w600,
                   color: Colors.black,
                   letterSpacing: 1.1,
@@ -33,10 +40,9 @@ Widget payBill() {
               const SizedBox(
                 height: 15,
               ),
-              const Text("Price: \$1120",
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    fontSize: 11,
+              Text(price,
+                  style: const TextStyle(
+                    fontSize: 14,
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 0, 0, 0),
                     letterSpacing: 1.1,
@@ -48,16 +54,22 @@ Widget payBill() {
                 onPressed: () {
                   Get.back();
                   Get.bottomSheet(
+                    elevation: 15,
+                    backgroundColor: Colors.greenAccent,
+                    useRootNavigator: true,
                     Container(
                     height: 200,
                     margin: const EdgeInsets.all(10),
+                    padding:const EdgeInsets.all(25),
                     decoration: const BoxDecoration(
-                        color: Color.fromARGB(113, 255, 251, 251),
-                        borderRadius: BorderRadius.all(Radius.circular(16))),
+                        //color: Color.fromARGB(113, 255, 251, 251),
+                        borderRadius: BorderRadius.all(Radius.circular(24))
+                        ),
                     child: Column(
                       children: [
                         ListTile(
-                          onTap: () {
+                          hoverColor: Colors.white,
+                          onTap: () { 
                             Get.snackbar('Payment Successfull', 'By Bkash',
                                 snackPosition: SnackPosition.TOP);
                           },
@@ -68,12 +80,13 @@ Widget payBill() {
                           height: 8,
                         ),
                         ListTile(
+                          hoverColor: Colors.white,
                           onTap: () {
-                            Get.snackbar('Payment Successfull', 'By Nogod',
-                                snackPosition: SnackPosition.TOP);
+                            Get.snackbar('Payment Successfull', 'By UCB Bank',
+                                snackPosition: SnackPosition.TOP,);
                           },
                           leading: const Icon(Icons.payment),
-                          title: const Text('Nogod'),
+                          title: const Text('UCB Bank'),
                         ),
                       ],
                     ),
