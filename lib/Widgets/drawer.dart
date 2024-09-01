@@ -45,7 +45,7 @@ Widget  customDrawer(){
      ),
 
      ListTile(
-       onTap: () => Get.offAll(const Login()),
+       onTap: () => Get.offAll(()=>const Login()),
        leading:const Icon(Icons.logout_outlined),
        title:const  Text('L o g  O u t'),
        hoverColor:Colors.white ,

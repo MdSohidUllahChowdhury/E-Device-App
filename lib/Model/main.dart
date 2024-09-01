@@ -4,30 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-void main(){
-  runApp(const E_Shopping_App());
-}
-// ignore: camel_case_types
-class E_Shopping_App extends StatelessWidget {
-  const E_Shopping_App({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    
-    return  ScreenUtilInit(
-      designSize: const Size(360,720),
-      child:  GetMaterialApp(
-
-        locale:const Locale('Eng'),
-        fallbackLocale:const Locale('Eng'),
+void main() {
+  runApp((ScreenUtilInit(
+    designSize: const Size(360, 720),
+    child: GetMaterialApp(
+        locale: const Locale('Eng'),
+        fallbackLocale: const Locale('Eng'),
         translations: Language(),
-
         debugShowCheckedModeBanner: false,
-        home:const SplashScreen(),
-        theme:ThemeData(
-          fontFamily: 'CustomFont'
-        )
-      ),
-    );
-  }
+        home: const SplashScreen(),
+        theme: ThemeData(
+          useMaterial3: true,
+          fontFamily: 'CustomFont')),
+  )));
 }

@@ -73,7 +73,7 @@ return Scaffold(
           
           const SizedBox(height:35),
           ElevatedButton(
-          onPressed:() => Get.to(const MainScreen()),
+          onPressed:() => Get.to(()=>const MainScreen()),
              style: ButtonStyle(
              elevation:const MaterialStatePropertyAll(0),
              minimumSize: MaterialStateProperty.all<Size>(const Size(300, 55)),

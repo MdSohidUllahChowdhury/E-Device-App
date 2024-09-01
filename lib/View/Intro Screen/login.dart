@@ -75,7 +75,7 @@ class Login extends StatelessWidget {
           onPressed: (){
               if (formkey.currentState!.validate())
               {
-               Get.to(const ProfileSet());
+               Get.to(()=>const ProfileSet());
               }
             }, 
 
@@ -104,7 +104,7 @@ class Login extends StatelessWidget {
           const SizedBox(height:16),
           
           TextButton(
-            onPressed:()=> Get.to(const Register()),
+            onPressed:()=> Get.to(()=>const Register()),
             child:const Text('Create New Account',
             style: TextStyle(
               fontSize: 10,

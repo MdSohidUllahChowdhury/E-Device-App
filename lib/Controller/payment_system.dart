@@ -40,7 +40,7 @@ Widget payBill(brandName, price) {
               const SizedBox(
                 height: 15,
               ),
-              Text(price,
+              Text('Price: $price',
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,

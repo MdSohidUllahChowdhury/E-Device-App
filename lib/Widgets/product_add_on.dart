@@ -1,4 +1,4 @@
-import 'package:e_device_app/Model/divice_model.dart';
+import 'package:e_device_app/Model/device_model.dart';
 import 'package:e_device_app/View/Main Screen/product_details.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -59,7 +59,7 @@ class ProductAddON extends StatelessWidget {
       itemBuilder: (context, index) {
         final iteam = product[index];
         return InkWell(
-          onTap: () => Get.to(ProductDetails(
+          onTap: () => Get.to(()=>ProductDetails(
             productImage: iteam.productPic,
             brandName: iteam.brandName,
             offerPrice: iteam.withOfferPrice,

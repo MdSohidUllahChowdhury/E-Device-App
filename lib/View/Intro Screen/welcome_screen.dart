@@ -48,7 +48,7 @@ class WelcomeScreen extends StatelessWidget {
             children: [
       
             ElevatedButton(
-             onPressed:() => Get.to(const Login()),
+             onPressed:() => Get.to(()=>const Login()),
              style: ButtonStyle(
              elevation:const MaterialStatePropertyAll(0),
              minimumSize: MaterialStateProperty.all<Size>(const Size(140, 45)),
@@ -66,7 +66,7 @@ class WelcomeScreen extends StatelessWidget {
 
            ElevatedButton(
              onPressed: (){
-              Get.to(const Register());
+              Get.to(()=>const Register());
              },
              style: ButtonStyle(
              elevation:const MaterialStatePropertyAll(0),

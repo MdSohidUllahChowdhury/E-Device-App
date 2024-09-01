@@ -68,7 +68,7 @@ class Register extends StatelessWidget {
           onPressed: (){
             if(formkey.currentState!.validate())
              {
-                Get.offAll(const Login());
+                Get.offAll(()=>const Login());
              }
             }, 
              style: ButtonStyle(
@@ -94,7 +94,7 @@ class Register extends StatelessWidget {
           const SizedBox(height:16),
          
           TextButton(
-            onPressed:() => Get.to(const Login()),
+            onPressed:() => Get.to(()=>const Login()),
             child:const Text('Already Have an Account?',
             style: TextStyle(
               fontSize: 10,
