@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 Widget quantity(){
-  var iteams = 1.obs;
+  var  iteams = 1.obs;
 return Row(
   mainAxisAlignment: MainAxisAlignment.center,
   children: [

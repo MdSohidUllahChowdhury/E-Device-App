@@ -7,10 +7,10 @@ class AdsBord extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> slidercontend = [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9uOLe6qkFSDc48cLCjsWInqWrLSkiB7IDNj8CUVgTbQ&s',
-      'https://cdn.dribbble.com/users/2951446/screenshots/6361953/smuti-slider_still_2x.gif?resize=400x0',
-      'https://3.bp.blogspot.com/-LKgDoJZfEyU/UBKXUIALobI/AAAAAAAAAjk/dafHbDYzH_w/s1600/healthy+food.jpg',
-      'https://ucarecdn.com/1579f3d3-4ab2-40a9-9015-679d18eeeadb/-/crop/1630x918/1,0/-/preview/-/quality/lighter/-/format/auto/-/scale_crop/1920x1080/center/',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoCOaGxNy-aGMdKCSFCEaS_b5m-nq2Mo5isg&s'
+      'https://i.ytimg.com/vi/aF_AEwxzM4A/hqdefault.jpg'
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT08cTNZVtAYspe_yS4HZGRmAJsOlhLtOy-eQ&s'
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKBl4UZw9RSDIDuyiy23gGo5uLhYHCDFZAnA&s'
     ];
     return CarouselSlider.builder(
       options: CarouselOptions(

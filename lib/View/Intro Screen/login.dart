@@ -80,9 +80,9 @@ class Login extends StatelessWidget {
             }, 
 
              style: ButtonStyle(
-             elevation:const MaterialStatePropertyAll(0),
-             minimumSize: MaterialStateProperty.all<Size>(const Size(300, 55)),
-             backgroundColor: MaterialStateProperty.all<Color>(
+             elevation:const WidgetStatePropertyAll(0),
+             minimumSize: WidgetStateProperty.all<Size>(const Size(300, 55)),
+             backgroundColor: WidgetStateProperty.all<Color>(
               const Color.fromARGB(232, 33, 149, 243)),
            ),
 

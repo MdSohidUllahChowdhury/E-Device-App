@@ -50,9 +50,9 @@ class WelcomeScreen extends StatelessWidget {
             ElevatedButton(
              onPressed:() => Get.to(()=>const Login()),
              style: ButtonStyle(
-             elevation:const MaterialStatePropertyAll(0),
-             minimumSize: MaterialStateProperty.all<Size>(const Size(140, 45)),
-             backgroundColor: MaterialStateProperty.all<Color>(
+             elevation:const WidgetStatePropertyAll(0),
+             minimumSize: WidgetStateProperty.all<Size>(const Size(140, 45)),
+             backgroundColor: WidgetStateProperty.all<Color>(
               const Color.fromARGB(232, 33, 149, 243)),
               ),
              child:const Text('Login',
@@ -69,9 +69,9 @@ class WelcomeScreen extends StatelessWidget {
               Get.to(()=>const Register());
              },
              style: ButtonStyle(
-             elevation:const MaterialStatePropertyAll(0),
-             minimumSize: MaterialStateProperty.all<Size>(const Size(140, 45)),
-             backgroundColor: MaterialStateProperty.all<Color>(
+             elevation:const WidgetStatePropertyAll(0),
+             minimumSize: WidgetStateProperty.all<Size>(const Size(140, 45)),
+             backgroundColor: WidgetStateProperty.all<Color>(
               const Color.fromARGB(232, 187, 190, 192)),
               ),
              child:const Text('Register',

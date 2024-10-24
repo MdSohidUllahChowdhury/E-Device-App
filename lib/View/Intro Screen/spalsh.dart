@@ -10,34 +10,30 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
-@override
+  @override
   void initState() {
-    
     super.initState();
     splashscreen();
-
   }
-   splashscreen() async {
-   await Future.delayed(
-   const Duration(seconds:2),
-   (){}
-   );
-   Get.offAll(()=>const WelcomeScreen());
+
+  splashscreen() async {
+    await Future.delayed(const Duration(seconds: 2), () {});
+    Get.offAll(() => const WelcomeScreen());
   }
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      backgroundColor:Colors.grey.shade300,
+    return Scaffold(
+      backgroundColor: Colors.grey.shade300,
       body: const Center(
-        child: Text('MONEY OR LOVE\nBRAIN OR HEART',
-        style:TextStyle(
-          color: Color.fromARGB(232, 33, 149, 243),
-          fontSize: 25,
-          fontWeight: FontWeight.bold,
-          letterSpacing: 1.4
-        ) ,),
+        child: Text(
+          'MONEY OR LOVE\nBRAIN OR HEART',
+          style: TextStyle(
+              color: Color.fromARGB(232, 33, 149, 243),
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.4),
+        ),
       ),
     );
   }

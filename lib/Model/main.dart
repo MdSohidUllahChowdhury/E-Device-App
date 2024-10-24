@@ -13,8 +13,6 @@ void main() {
         translations: Language(),
         debugShowCheckedModeBanner: false,
         home: const SplashScreen(),
-        theme: ThemeData(
-          useMaterial3: true,
-          fontFamily: 'CustomFont')),
+        theme: ThemeData(useMaterial3: true, fontFamily: 'CustomFont')),
   )));
 }

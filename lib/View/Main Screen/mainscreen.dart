@@ -11,8 +11,6 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -27,7 +25,7 @@ class MainScreen extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              Get.to(const ProfileSet());
+              Get.to(()=>const ProfileSet());
             },
             icon: const Icon(Icons.person),
           ),

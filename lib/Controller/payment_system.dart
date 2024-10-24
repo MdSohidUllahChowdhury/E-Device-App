@@ -54,49 +54,52 @@ Widget payBill(brandName, price) {
                 onPressed: () {
                   Get.back();
                   Get.bottomSheet(
-                    elevation: 15,
-                    backgroundColor: Colors.greenAccent,
-                    useRootNavigator: true,
-                    Container(
-                    height: 200,
-                    margin: const EdgeInsets.all(10),
-                    padding:const EdgeInsets.all(25),
-                    decoration: const BoxDecoration(
-                        //color: Color.fromARGB(113, 255, 251, 251),
-                        borderRadius: BorderRadius.all(Radius.circular(24))
+                      elevation: 15,
+                      backgroundColor: Colors.greenAccent,
+                      useRootNavigator: true,
+                      Container(
+                        height: 200,
+                        margin: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(25),
+                        decoration: const BoxDecoration(
+                            //color: Color.fromARGB(113, 255, 251, 251),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(24))),
+                        child: Column(
+                          children: [
+                            ListTile(
+                              hoverColor: Colors.white,
+                              onTap: () {
+                                Get.snackbar('Payment Successfull', 'By Bkash',
+                                    snackPosition: SnackPosition.TOP);
+                              },
+                              leading: const Icon(Icons.payment),
+                              title: const Text('Bkash'),
+                            ),
+                            const SizedBox(
+                              height: 8,
+                            ),
+                            ListTile(
+                              hoverColor: Colors.white,
+                              onTap: () {
+                                Get.snackbar(
+                                  'Payment Successfull',
+                                  'By UCB Bank',
+                                  snackPosition: SnackPosition.TOP,
+                                );
+                              },
+                              leading: const Icon(Icons.payment),
+                              title: const Text('UCB Bank'),
+                            ),
+                          ],
                         ),
-                    child: Column(
-                      children: [
-                        ListTile(
-                          hoverColor: Colors.white,
-                          onTap: () { 
-                            Get.snackbar('Payment Successfull', 'By Bkash',
-                                snackPosition: SnackPosition.TOP);
-                          },
-                          leading: const Icon(Icons.payment),
-                          title: const Text('Bkash'),
-                        ),
-                        const SizedBox(
-                          height: 8,
-                        ),
-                        ListTile(
-                          hoverColor: Colors.white,
-                          onTap: () {
-                            Get.snackbar('Payment Successfull', 'By UCB Bank',
-                                snackPosition: SnackPosition.TOP,);
-                          },
-                          leading: const Icon(Icons.payment),
-                          title: const Text('UCB Bank'),
-                        ),
-                      ],
-                    ),
-                  ));
+                      ));
                 },
                 style: ButtonStyle(
-                  elevation: const MaterialStatePropertyAll(0),
+                  elevation: const WidgetStatePropertyAll(0),
                   minimumSize:
-                      MaterialStateProperty.all<Size>(const Size(180, 55)),
-                  backgroundColor: MaterialStateProperty.all<Color>(
+                      WidgetStateProperty.all<Size>(const Size(180, 55)),
+                  backgroundColor: WidgetStateProperty.all<Color>(
                       const Color.fromARGB(232, 243, 229, 33)),
                 ),
                 child: const Text(
@@ -112,9 +115,9 @@ Widget payBill(brandName, price) {
           )));
     },
     style: ButtonStyle(
-      elevation: const MaterialStatePropertyAll(0),
-      minimumSize: MaterialStateProperty.all<Size>(const Size(300, 55)),
-      backgroundColor: MaterialStateProperty.all<Color>(
+      elevation: const WidgetStatePropertyAll(0),
+      minimumSize: WidgetStateProperty.all<Size>(const Size(300, 55)),
+      backgroundColor: WidgetStateProperty.all<Color>(
           const Color.fromARGB(232, 243, 229, 33)),
     ),
     child: const Text(
