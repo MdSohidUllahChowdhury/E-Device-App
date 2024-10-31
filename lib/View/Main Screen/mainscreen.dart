@@ -1,5 +1,5 @@
 import 'package:e_device_app/Controller/utils.dart';
-import 'package:e_device_app/View/Setting%20Screen/profile.dart';
+import 'package:e_device_app/View/Main%20Screen/cart_items.dart';
 import 'package:e_device_app/Widgets/ads_bord.dart';
 import 'package:e_device_app/Widgets/drawer.dart';
 import 'package:e_device_app/Widgets/product_add_on.dart';
@@ -25,9 +25,9 @@ class MainScreen extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              Get.to(()=>const ProfileSet());
+              Get.to(()=>const CartItems());
             },
-            icon: const Icon(Icons.person),
+            icon: const Icon(Icons.shopping_bag_outlined),
           ),
         ],
       ),

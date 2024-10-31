@@ -1,5 +1,6 @@
 import 'package:e_device_app/View/Intro Screen/login.dart';
 import 'package:e_device_app/View/Setting%20Screen/language.dart';
+import 'package:e_device_app/View/Setting%20Screen/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -22,9 +23,9 @@ Widget customDrawer() {
             height: 80,
           ),
           ListTile(
-            onTap: () => Get.back(),
-            leading: const Icon(Icons.home_filled),
-            title: const Text('H o m e'),
+            onTap: () =>Get.to(()=>const ProfileSet()),
+            leading: const Icon(Icons.person),
+            title: const Text('P r o f i l e'),
             hoverColor: Colors.white,
           ),
           ListTile(

@@ -1,50 +1,18 @@
-import 'package:e_device_app/Model/device_model.dart';
+import 'package:e_device_app/Controller/provider_cart.dart';
+import 'package:e_device_app/Model/product_list.dart';
 import 'package:e_device_app/View/Main Screen/product_details.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 
 class ProductAddON extends StatelessWidget {
   const ProductAddON({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<DeviceModel> product = [
-      DeviceModel(
-        productPic: 'lib/Assets/Images/laptop.png',
-        brandName: 'Mac Note Book M4',
-        withOutOfferPrice: '\$16,800',
-        withOfferPrice: '\$14,800',
-        discount: '12% Off',
-      ),
-      DeviceModel(
-        productPic: 'lib/Assets/Images/S24.png',
-        brandName: 'Sumsung S24 Ultra',
-        withOutOfferPrice: '\$1,800',
-        withOfferPrice: '\$1,699',
-        discount: '18% Off',
-      ),
-      DeviceModel(
-        productPic: 'lib/Assets/Images/13pro.png',
-        brandName: 'Iphone 13 pro',
-        withOutOfferPrice: '\$1,599',
-        withOfferPrice: '\$1,499',
-        discount: '21% Off',
-      ),
-      DeviceModel(
-        productPic: 'lib/Assets/Images/13.png',
-        brandName: 'Iphone 13',
-        withOutOfferPrice: '\$1,499',
-        withOfferPrice: '\$1,399',
-        discount: '7% Off',
-      ),
-      DeviceModel(
-        productPic: 'lib/Assets/Images/S24.png',
-        brandName: 'Sumsung S24 Ultra',
-        withOutOfferPrice: '\$1,800',
-        withOfferPrice: '\$1,699',
-        discount: '18% Off',
-      ),
-    ];
+  
+  final  product = productList;
+  final provider = Provider.of<CartController>(context,listen: false);
 
     return GridView.builder(
       itemCount: product.length,
@@ -139,7 +107,10 @@ class ProductAddON extends StatelessWidget {
                     ),
                   ),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.snackbar('Added to the cart', 'Favorit item added');
+                      provider.adtoCart(iteam);
+                      },
                       icon: const Icon(
                         Icons.favorite_border,
                         size: 15,
