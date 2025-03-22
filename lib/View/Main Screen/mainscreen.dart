@@ -12,8 +12,9 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor:const Color(0xffE3F0A3),
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor:Colors.transparent,
         elevation: 0,
         actions: [
           IconButton(

@@ -23,7 +23,7 @@ Widget customDrawer() {
             height: 80,
           ),
           ListTile(
-            onTap: () =>Get.to(()=>const ProfileSet()),
+            onTap: () => Get.to(() => const ProfileSet()),
             leading: const Icon(Icons.person),
             title: const Text('P r o f i l e'),
             hoverColor: Colors.white,

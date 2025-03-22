@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Text(
           'MONEY OR LOVE\nBRAIN OR HEART',
           style: TextStyle(
-              color: Color.fromARGB(232, 33, 149, 243),
+              color: Color(0xff42D674),
               fontSize: 25,
               fontWeight: FontWeight.bold,
               letterSpacing: 1.4),

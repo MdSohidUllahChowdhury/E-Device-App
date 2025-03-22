@@ -1,6 +1,6 @@
 {
-    "name": "e_shopping_app",
-    "short_name": "e_shopping_app",
+    "name": "e_device_app",
+    "short_name": "e_device_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

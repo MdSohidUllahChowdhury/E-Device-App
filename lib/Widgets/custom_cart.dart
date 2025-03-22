@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 class CustomCart extends StatelessWidget {
   CustomCart({super.key,  required this.item});
 
-DeviceModel item;
+  DeviceModel item;
   @override
   Widget build(BuildContext context) {
     
@@ -26,7 +26,7 @@ DeviceModel item;
                 padding: const EdgeInsets.all(12),
                 height: 100,
                 decoration: BoxDecoration(
-                    color:const Color.fromARGB(209, 189, 167, 167),
+                    color:const Color(0xff42D674),
                     borderRadius: BorderRadius.circular(24),
                     boxShadow: [
                       BoxShadow(

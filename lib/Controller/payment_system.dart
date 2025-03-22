@@ -5,7 +5,8 @@ Widget payBill(brandName, price) {
  
   return ElevatedButton(
     onPressed: () {
-      Get.bottomSheet(Container(
+      Get.bottomSheet(
+        Container(
           height: 400,
           width: 300,
           margin: const EdgeInsets.all(16),
@@ -56,14 +57,13 @@ Widget payBill(brandName, price) {
                   Get.back();
                   Get.bottomSheet(
                       elevation: 15,
-                      backgroundColor: Colors.greenAccent,
+                      backgroundColor: const Color(0xff42D674),
                       useRootNavigator: true,
                       Container(
                         height: 200,
                         margin: const EdgeInsets.all(10),
                         padding: const EdgeInsets.all(25),
                         decoration: const BoxDecoration(
-                            //color: Color.fromARGB(113, 255, 251, 251),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(24))),
                         child: Column(
@@ -101,7 +101,7 @@ Widget payBill(brandName, price) {
                   minimumSize:
                       WidgetStateProperty.all<Size>(const Size(180, 55)),
                   backgroundColor: WidgetStateProperty.all<Color>(
-                      const Color.fromARGB(232, 243, 229, 33)),
+                      const Color(0xff42D674)),
                 ),
                 child: const Text(
                   'Pay Bill',
@@ -119,7 +119,7 @@ Widget payBill(brandName, price) {
       elevation: const WidgetStatePropertyAll(0),
       minimumSize: WidgetStateProperty.all<Size>(const Size(300, 55)),
       backgroundColor: WidgetStateProperty.all<Color>(
-          const Color.fromARGB(232, 243, 229, 33)),
+          const Color(0xff42D674)),
     ),
     child: const Text(
       'Buy Now',

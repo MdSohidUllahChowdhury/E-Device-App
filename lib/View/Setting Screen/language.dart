@@ -34,8 +34,7 @@ Widget language() {
                     snackPosition: SnackPosition.TOP);
               },
               style: ButtonStyle(
-                minimumSize:
-                    WidgetStateProperty.all<Size>(const Size(80, 45)),
+                minimumSize: WidgetStateProperty.all<Size>(const Size(80, 45)),
                 backgroundColor: WidgetStateProperty.all<Color>(Colors.teal),
               ),
               child: const Text(

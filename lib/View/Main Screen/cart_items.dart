@@ -9,17 +9,17 @@ class CartItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Colors.transparent,
+      backgroundColor:const Color(0xffE3F0A3),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        toolbarHeight: 25,
+        toolbarHeight: 45,
         centerTitle: true,
         title: const Text('Favorite Items'),
       ),
       body: Consumer<CartController>(
         builder: (context, value, child) => Column(
           children: [
-            const SizedBox(height: 12),
+            const SizedBox(height:20),
             Expanded(
               child: ListView.builder(
                 itemCount: value.callingCart.length,

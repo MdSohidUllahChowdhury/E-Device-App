@@ -18,7 +18,7 @@ class ProfileSet extends StatelessWidget {
             style: TextStyle(
               fontSize: 27,
               letterSpacing: 1.4,
-              color: Color.fromARGB(232, 33, 149, 243),
+              color: Color(0xff42D674),
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -72,7 +72,8 @@ class ProfileSet extends StatelessWidget {
               elevation: const WidgetStatePropertyAll(0),
               minimumSize: WidgetStateProperty.all<Size>(const Size(300, 55)),
               backgroundColor: WidgetStateProperty.all<Color>(
-                  const Color.fromARGB(232, 33, 149, 243)),
+                const Color(0xff42D674),
+              ),
             ),
             child: const Text(
               'Complete Setup',

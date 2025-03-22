@@ -10,91 +10,88 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Animate(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-           
-            Image.asset('lib/Assets/Images/man.png',
+        body: Animate(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image.asset(
+            'lib/Assets/Images/man.png',
             height: 250,
             width: double.infinity,
-            ),
-            const SizedBox(height: 30),
-            const Text('Discover Your\nDream Device Here',
+          ),
+          const SizedBox(height: 30),
+          const Text(
+            'Discover Your\nDream Device Here',
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 27,
-              color: Color.fromARGB(232, 33, 149, 243),
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.4
-            ),
-            ),
-            const SizedBox(height:15),
-            const Center(
-              child: Center(
-                child: Text('Explore all the existing devices based on your\ninterest and yor perfection',
+                fontSize: 27,
+                color: Color(0xff42D674),
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1.4),
+          ),
+          const SizedBox(height: 15),
+          const Center(
+            child: Center(
+              child: Text(
+                'Explore all the existing devices based on your\ninterest and yor perfection',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 10,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.4
-                ),),
+                    fontSize: 10,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.4),
               ),
             ),
-            const SizedBox(height: 45),
-        
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-        
+          ),
+          const SizedBox(height: 45),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
               ElevatedButton(
-               onPressed:() => Get.to(()=>const Login()),
-               style: ButtonStyle(
-               elevation:const WidgetStatePropertyAll(0),
-               minimumSize: WidgetStateProperty.all<Size>(const Size(140, 45)),
-               backgroundColor: WidgetStateProperty.all<Color>(
-                const Color.fromARGB(232, 33, 149, 243)),
+                onPressed: () => Get.to(() => const Login()),
+                style: ButtonStyle(
+                  elevation: const WidgetStatePropertyAll(0),
+                  minimumSize:
+                      WidgetStateProperty.all<Size>(const Size(140, 45)),
+                  backgroundColor: WidgetStateProperty.all<Color>(
+                    const Color(0xff42D674),
+                  ),
                 ),
-               child:const Text('Login',
-                style: TextStyle(
-                fontSize: 14,
-                letterSpacing: 1.2,
-                color:Colors.white,
-                fontWeight: FontWeight.bold),
-                ),
-              ),
-        
-             ElevatedButton(
-               onPressed: (){
-                Get.to(()=>const Register());
-               },
-               style: ButtonStyle(
-               elevation:const WidgetStatePropertyAll(0),
-               minimumSize: WidgetStateProperty.all<Size>(const Size(140, 45)),
-               backgroundColor: WidgetStateProperty.all<Color>(
-                const Color.fromARGB(232, 187, 190, 192)),
-                ),
-               child:const Text('Register',
-                style: TextStyle(
-                fontSize: 14,
-                color:Colors.black,
-                letterSpacing: 1.2,
-                fontWeight: FontWeight.bold),
+                child: const Text(
+                  'Login',
+                  style: TextStyle(
+                      fontSize: 14,
+                      letterSpacing: 1.2,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
-        
-              ],
-            )
-          ],
-        ),
-      ).animate().flip(
-        duration:const Duration(seconds: 1)
-        ).shimmer(
-          color: Colors.blueAccent,
-          duration:const Duration(seconds: 4)
-        )
-    );
+              ElevatedButton(
+                onPressed: () {
+                  Get.to(() => const Register());
+                },
+                style: ButtonStyle(
+                  elevation: const WidgetStatePropertyAll(0),
+                  minimumSize:
+                      WidgetStateProperty.all<Size>(const Size(140, 45)),
+                  backgroundColor: WidgetStateProperty.all<Color>(
+                      const Color.fromARGB(232, 187, 190, 192)),
+                ),
+                child: const Text(
+                  'Register',
+                  style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                      letterSpacing: 1.2,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
+    ).animate().flip(duration: const Duration(seconds: 1)).shimmer(
+            color: Colors.blueAccent, duration: const Duration(seconds: 4)));
   }
 }
